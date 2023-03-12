@@ -1,0 +1,11 @@
+## Rediriger les requêtes vers le routeur :
+RewriteEngine on
+
+
+RewriteCond %{REQUEST_URI} !\.(css|js|jpg|png|jpeg|gif)$ [NC]
+RewriteRule   (.*)  controleurs/router.php
+
+
+## Rechercher l'URI parmi les routes :
+# ErrorDocument 404 /controleurs/router.php
+
